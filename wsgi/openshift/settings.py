@@ -144,7 +144,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, '..', 'static')
 STATIC_URL = '/static/'
 
 CLOUDINARY = {
-    'cloud_name' : 'sagoyanfisic',
-    'api_key' : '515926249273228',
-    'api_secret': 'RkJqkiWCFB3Vz4X4liqUO4KB5jI'
+    'cloud_name' : 'exmpleuser_',
+    'api_key' : 'aqui_va_el_key',
+    'api_secret': 'aqui_va_el_secret_key'
 }
