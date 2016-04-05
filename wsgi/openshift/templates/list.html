@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load cloudinary %}
+
+{% block body %}
+
+    {% if not photos.exists %}
+        <span>No hay fotos :P </span>
+    {% endif %}
+    {% for photo in photos %}
+{% for sample in samples %}
+<div class="container">
+			<div class="profile">
+				<div class="pic">
+					<div class="img">
+                         {% cloudinary photo.image sample %}
+                    </div>
+					<i class="  icon-plus"></i>
+					<i class="icon-ok"></i>
+				</div>
+				<h4>{{ photo.name_user }}</h4>
+				<p>{{ photo.description }}</p>
+			</div>
+		</div>
+      </div>
+  </div>
+  {% endfor %}
+            {% endfor %}
+
+{% endblock %}
+{% block javascript %}
+  $(function () {
+    $('.toggle_info').click(function () {
+      $(this).closest('.photo').toggleClass('show_more_info');
+      return false;
+    });
+  });
+{% endblock %}
+
